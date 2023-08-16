@@ -1,9 +1,0 @@
-.btns {
-  display: flex;
-  align-items: center;
-  grid-gap: clamp(7px, 1.111vw, 16px);
-
-  @media (max-width: 576px) {
-    justify-content: center;
-  }
-}
