@@ -1,0 +1,66 @@
+.header {
+  position: absolute;
+  width: 100%;
+  padding: clamp(10px, 1.389vw, 20px) 0;
+  background-color: transparent;
+  z-index: 10;
+  transition: all 0.4s ease;
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--color-white);
+    background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+  }
+
+  &__wrapp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    svg {
+      width: 109px;
+      width: clamp(77px, 7.569vw, 109px);
+      height: clamp(45px, 4.514vw, 65px);
+    }
+
+    @media (max-width: 576px) {
+      div {
+        display: none;
+      }
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    grid-gap: clamp(12px, 1.111vw, 16px);
+
+    .btn {
+      height: clamp(40px, 3.889vw, 56px);
+      font-size: clamp(12px, 1.111vw, 16px);
+    }
+
+    .btn:first-child {
+      padding: 0 clamp(25px, 2.431vw, 35px);
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    top: -50px;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+

@@ -1,0 +1,76 @@
+.btn {
+  position: relative;
+  height: 56px;
+  padding: 0 35px;
+  background-color: var(--color-white);
+  background-color: transparent;
+  border: 2px solid var(--color-purple);
+  border-radius: clamp(74px, 6.944vw, 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family-dmsans);
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: 700;
+  color: var(--color-purple);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+
+  &:hover,
+  &:active {
+    border: 2px solid rgba(106, 87, 231, 0.7);
+    color: rgba(106, 87, 231, 0.7);
+  }
+
+  &--download {
+    background-color: var(--color-purple);
+    color: var(--color-white);
+
+    svg {
+      display: none;
+    }
+
+    @media (max-width: 576px) {
+      width: 40px;
+      padding: 0;
+
+      svg {
+        display: flex;
+      }
+
+      span {
+        display: none;
+      }
+    }
+
+    &:hover {
+      border: 2px solid transparent;
+      background: rgba(106, 87, 231, 0.07);
+      color: var(--color-purple);
+    }
+  }
+
+  &--appstore {
+    padding: 0 27px;
+    background-color: var(--color-purple);
+
+    svg {
+      fill: var(--color-white);
+      width: 109px;
+      height: 32px;
+      transition: all 0.3s ease;
+    }
+
+    &:hover,
+    &:active {
+      border: 2px solid transparent;
+      background: rgba(106, 87, 231, 0.07);
+      color: var(--color-purple);
+
+      svg {
+        fill: var(--color-purple);
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.logo {
+  display: flex;
+  align-items: center;
+  grid-gap: clamp(10px, 1.181vw, 17px);
+
+  &__text {
+    font-size: clamp(32px, 2.778vw, 40px);
+    line-height: clamp(49px, 4.306vw, 62px);
+    font-weight: 700;
+    color: var(--color-main);
+
+    span {
+      color: var(--color-purple);
+    }
+  }
+}

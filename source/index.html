@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+@include('partials/head.html',{})
+
+<body>
+  <div class="wrapper">
+    @include('partials/header.html',{})
+
+    <main class="main">
+      <section class="hero">
+        <div class="hero__line">
+          <svg width="814" height="676" viewBox="0 0 814 676" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="path" fill="none" stroke="#C5BBDB" opacity="0.7" stroke-opacity="0.6"  stroke-width="5" d="M80.0936 -193.104C176.315 -139.155 353.949 2.24145 294.71 136.235C220.66 303.728 -103.429 375.626 38.2294 586.071C154.489 758.785 609.5 663 812 397.5"/>
+            <path class="dashed" fill="none" stroke="white" stroke-width="5" d="M80.0936 -193.104C176.315 -139.155 353.949 2.24145 294.71 136.235C220.66 303.728 -103.429 375.626 38.2294 586.071C154.489 758.785 609.5 663 812 397.5"/>
+          </svg>
+        </div>
+
+        <div class="container">
+          <div class="hero__wrapp">
+            <h1 class="hero__title">Scan your feet and find your shoe size for a great fit every time!</h1>
+
+            <div class="hero__btns btns">
+              <a class="btn btn--appstore" href="#">
+                <svg width='109' height='32'>
+                  <use href='img/sprite/sprite.svg#appstore'></use>
+                </svg>
+              </a>
+              <a class="green btn anchor" href="#join">Join us</a>
+            </div>
+
+            <div class="hero__right">
+              <div class="hero__bg">
+                <picture>
+                  <source type='image/webp' srcset='img/hero-bg.webp'>
+                  <img width='690' height='574' src='img/hero-bg.png' alt=''>
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="info">
+        <div class="container">
+          <div class="info__wrapp">
+            <div class="info__swiper">
+              <div class="info__swiper-wrapper swiper-wrapper">
+                <div class="info__swiper-slide swiper-slide">
+                  <div class="slide">
+                    <div class="slide__img slide__img--first">
+                      <div class="slide__image slide__image--first">
+                        <picture>
+                          <source type='image/webp' srcset='img/slides/slide1.webp'>
+                          <img width='467' height='471' src='img/slides/slide1.png' alt='If the shoe fits...'>
+                        </picture>
+                      </div>
+                    </div>
+
+                    <div class="slide__info">
+                      <h2 class="slide__title">If the shoe fits...</h2>
+                      <p class="slide__descr">Then wear it confidently. Now you can order shoes online without needing to worry about sending them back.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="info__swiper-slide swiper-slide">
+                  <div class="slide">
+                    <div class="slide__img slide__img--second">
+                      <div class="slide__image slide__image--second">
+                        <picture>
+                          <source type='image/webp' srcset='img/slides/slide2.webp'>
+                          <img width='467' height='471' src='img/slides/slide2.png' alt='3D scan of your feet in 3 minutes!'>
+                        </picture>
+                      </div>
+                    </div>
+
+                    <div class="slide__info">
+                      <h2 class="slide__title">3D scan of your feet in 3 minutes!</h2>
+                      <p class="slide__descr">Perform a scan right now from the comfort of your home using only your phone.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="info__swiper-slide swiper-slide">
+                  <div class="slide">
+                    <div class="slide__img slide__img--third">
+                      <div class="slide__image slide__image--third">
+                        <picture>
+                          <source type='image/webp' srcset='img/slides/slide3.webp'>
+                          <img width='467' height='471' src='img/slides/slide3.png' alt='All in one place!'>
+                        </picture>
+                      </div>
+                    </div>
+
+                    <div class="slide__info">
+                      <h2 class="slide__title">All in one place!</h2>
+                      <p class="slide__descr">Create and save 3D scans of your family and use them at any time!</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="info__swiper-pagination swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about">
+        <div class="container">
+          <div class="about__wrapp">
+            <div class="about__info">
+              <h2 class="about__title">How it works.</h2>
+
+              <p class="about__descr">Fast! Accurate! Free!</p>
+
+              <div class="about__btns btns">
+                <a class="btn btn--appstore" href="#">
+                  <svg width='109' height='32'>
+                    <use href='img/sprite/sprite.svg#appstore'></use>
+                  </svg>
+                </a>
+                <a class="btn anchor" href="#join">Join us</a>
+              </div>
+
+              <ul class="about__items">
+                <li class="about__item">
+                  Open the SizerAR smartphone app
+                </li>
+                <li class="about__item">
+                  Enter the information required for scanning
+                </li>
+                <li class="about__item">
+                  The person have to put on the socks
+                </li>
+                <li class="about__item">
+                  Scan both of your feet
+                </li>
+                <li class="about__item">
+                  View your results
+                </li>
+                <li class="about__item">
+                  Save results to your profile
+                </li>
+              </ul>
+            </div>
+
+            <div class="about__right">
+              <div class="about__right-box">
+                <div class="about__phone">
+                  <video class="about__phone-video" autoplay muted loop playsinline preload="auto">
+                    <source src="img/test.webm" type="video/webm">
+                    <source src="img/test.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="details">
+        <div class="container">
+          <div class="details__wrapp">
+            <h2 class="details__title">Three-dimensional accuracy</h2>
+
+            <div class="details__info">
+              <div class="details__left">
+                <div class="details__block">
+                  <div class="details__block-head">Your feet change as you age</div>
+                  <p class="details__block-text">As we get older, our feet change in a variety of ways. Tendon’s get less elastic and our feet can become wider.
+                  </p>
+                </div>
+
+                <div class="details__btns btns">
+                  <a class="btn btn--appstore" href="#">
+                    <svg width='109' height='32'>
+                      <use href='img/sprite/sprite.svg#appstore'></use>
+                    </svg>
+                  </a>
+                  <a class="btn anchor" href="#join">Join us</a>
+                </div>
+              </div>
+
+              <div class="details__bg">
+                <picture>
+                  <source type='image/webp' srcset='img/details-bg.webp'>
+                  <img width='582' height='638' src='img/details-bg.png' alt=''>
+                </picture>
+              </div>
+
+              <div class="details__right">
+                <div class="details__block">
+                  <div class="details__block-head">Don’t even get us started on children’s feet :)</div>
+                  <p class="details__block-text">If you have kids, then you know that their feet seem to grow a new size every couple of months.
+                  </p>
+                </div>
+
+                <div class="details__block">
+                  <div class="details__block-head">But its about more than just your foot size...</div>
+                  <p class="details__block-text">Shoes from different brands have different nuances about their fit. Comparing these parameters can help you get a better fit.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feedbacks">
+        <div class="container">
+          <div class="feedbacks__wrapp">
+            <h2 class="feedbacks__title">Build, feedback, iterate, repeat...</h2>
+
+            <div class="feedbacks__slider">
+              <div class="feedbacks__slider-wrapper swiper-wrapper">
+                <div class="feedbacks__slide swiper-slide">
+                  <div class="feedback">
+                    <div class="feedback__title">Frictionless & Fantastic</div>
+
+                    <p class="feedback__text">Shoes from different brands have different nuances about their fit. Comparing these parameters can help you get a better fit.
+                    </p>
+
+                    <div class="feedback__ratings">
+                      <svg width='30' height='30'>
+                        <use href='img/sprite/sprite.svg#star-full'></use>
+                      </svg>
+                      <svg width='30' height='30'>
+                        <use href='img/sprite/sprite.svg#star-full'></use>
+                      </svg>
+                      <svg width='30' height='30'>
+                        <use href='img/sprite/sprite.svg#star-full'></use>
+                      </svg>
+                      <svg width='30' height='30'>
+                        <use href='img/sprite/sprite.svg#star-full'></use>
+                      </svg>
+                      <svg width='30' height='30'>
+                        <use href='img/sprite/sprite.svg#star-full'></use>
+                      </svg>
+                    </div>
+
+                    <div class="feedback__bot">
+                      <span class="feedback__author">Victor</span>
+
+                      <span class="feedback__datetime">05/06/2023</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="feedbacks__slide swiper-slide">
+                  <div class="feedback">
+                    <div class="feedback__title">Frictionless & Fantastic</div>
+
+                    <p class="feedback__text">Shoes from different brands have different nuances about their fit. Comparing these parameters can help you get a better fit.
+                    </p>
+
+                    <div class="feedback__ratings">
+                      <svg width='30' height='30'>
+                        <use href='img/sprite/sprite.svg#star-full'></use>
+                      </svg>
+                      <svg width='30' height='30'>
+                        <use href='img/sprite/sprite.svg#star-full'></use>
+                      </svg>
+                      <svg width='30' height='30'>
+                        <use href='img/sprite/sprite.svg#star-full'></use>
+                      </svg>
+                      <svg width='30' height='30'>
+                        <use href='img/sprite/sprite.svg#star-full'></use>
+                      </svg>
+                      <svg width='30' height='30'>
+                        <use href='img/sprite/sprite.svg#star-full'></use>
+                      </svg>
+                    </div>
+
+                    <div class="feedback__bot">
+                      <span class="feedback__author">Victor</span>
+
+                      <span class="feedback__datetime">05/06/2023</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="feedbacks__slide swiper-slide">
+                  <div class="feedback">
+                    <div class="feedback__title">Frictionless & Fantastic</div>
+
+                    <p class="feedback__text">Shoes from different brands have different nuances about their fit. Comparing these parameters can help you get a better fit.
+                    </p>
+
+                    <div class="feedback__ratings">
+                      <svg width='30' height='30'>
+                        <use href='img/sprite/sprite.svg#star-full'></use>
+                      </svg>
+                      <svg width='30' height='30'>
+                        <use href='img/sprite/sprite.svg#star-full'></use>
+                      </svg>
+                      <svg width='30' height='30'>
+                        <use href='img/sprite/sprite.svg#star-full'></use>
+                      </svg>
+                      <svg width='30' height='30'>
+                        <use href='img/sprite/sprite.svg#star-full'></use>
+                      </svg>
+                      <svg width='30' height='30'>
+                        <use href='img/sprite/sprite.svg#star-full'></use>
+                      </svg>
+                    </div>
+
+                    <div class="feedback__bot">
+                      <span class="feedback__author">Victor</span>
+
+                      <span class="feedback__datetime">05/06/2023</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="join" id="join">
+        <div class="join__line">
+          <svg width="1724" height="898" viewBox="0 0 1724 898" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="path" fill="none" stroke="#C5BBDB" opacity="0.7" stroke-opacity="0.6"  stroke-width="5" d="M213.185 -157.017C316.503 -104.854 499.966 44.8319 407.27 226.269C291.401 453.066 -100.707 601.27 28.6071 845.4C134.735 1045.76 1472.63 598.313 1756 224"/>
+            <path class="dashed" fill="none" stroke="white" stroke-width="5" d="M213.185 -157.017C316.503 -104.854 499.966 44.8319 407.27 226.269C291.401 453.066 -100.707 601.27 28.6071 845.4C134.735 1045.76 1472.63 598.313 1756 224"/>
+          </svg>
+        </div>
+
+        <div class="join__wrapper">
+          <div class="container">
+            <div class="join__wrapp">
+              <div class="join__logo logo">
+                <svg width='85' height='50'>
+                  <use href='img/sprite/sprite.svg#logo'></use>
+                </svg>
+
+                <div class="logo__text">Sizer<span>AR</span></div>
+              </div>
+
+              <h2 class="join__title">Partner with us and use our app for your business!</h2>
+
+              <p class="join__descr">Thanks to our app, you can triple your users, reduce the number of returns associated with matching sizes, and increase your number of satisfied customers!</p>
+
+              <form class="form">
+                <div class="form__labels">
+                  <label class="form__label">
+                    <input class="form__input" type="text" name="name" placeholder="Name or company name">
+                  </label>
+                  <label class="form__label">
+                    <input class="form__input" type="email" name="email" placeholder="E-mail">
+                  </label>
+                  <label class="form__label">
+                    <textarea class="form__textarea" name="description" placeholder="Description"></textarea>
+                  </label>
+                </div>
+                <div class="form__bot">
+                  <button class="form__btn">Send</button>
+                  <span>or</span>
+                  <a class="email" href="mailto:contacts@sizerar.com">contacts@sizerar.com</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @include('partials/footer.html',{})
+    @include('partials/modals.html',{})
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

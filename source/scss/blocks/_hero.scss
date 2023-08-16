@@ -1,0 +1,225 @@
+.hero {
+  position: relative;
+  // padding: clamp(92px, 15.972vw, 230px) 0 clamp(65px, 10.833vw, 156px);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 1240px) {
+    height: 100%;
+    padding: clamp(92px, 15.972vw, 230px) 0 clamp(65px, 10.833vw, 156px);
+  }
+
+
+  &__line {
+    position: absolute;
+    top: 0;
+    left: 55%;
+    transform: translateX(-55%);
+    z-index: -1;
+
+    svg {
+      fill: transparent;
+      height: clamp(365px, 46.944vw, 676px);
+      height: clamp(365px, 41.667vw, 800px);
+      width: clamp(440px, 56.528vw, 814px);
+
+      .dashed{
+        stroke-dasharray: 8 8;
+      }
+
+      .path {
+        stroke-dasharray: 2600;
+        stroke-dashoffset: 2600;
+        animation: dash 5s linear forwards;
+        stroke: #C5BBDB;
+      }
+    }
+  }
+
+  &__wrapp {
+    display: grid;
+    // align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: clamp(20px, 2.778vw, 40px) clamp(10px, 2.083vw, 30px);
+
+    @media (max-width: 767px) {
+      grid-template-columns: 100%;
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: flex-end;
+
+    // @media (max-width: 992px) {
+    //   br {
+    //     display: none;
+    //   }
+    // }
+
+    @media (max-width: 576px) {
+      text-align: center;
+    }
+  }
+
+  &__right {
+    position: relative;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 3%;
+      left: 24%;
+      background-image: var(--hero-red);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 126px;
+      height: 106px;
+      width: clamp(58px, 6.563vw, 126px);
+      height: clamp(42px, 5.521vw, 106px);
+      animation-name: red-image;
+      animation-duration: 8s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      z-index: 3;
+    }
+
+    @media (max-width: 767px) {
+      grid-column: 1;
+      grid-row: 2;
+    }
+  }
+
+  &__bg {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 30%;
+      left: 25%;
+      background-image: var(--hero-green);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 65.905px;
+      height: 40.533px;
+      width: clamp(33px, 4.514vw, 65px);
+      height: clamp(20px, 2.847vw, 41px);
+      animation-name: green-image;
+      animation-duration: 9s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 15%;
+      left: 10%;
+      background-image: var(--hero-yellow);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 98px;
+      height: 93px;
+      width: clamp(55px, 5.104vw, 98px);
+      height: clamp(33px, 4.844vw, 93px);
+      animation-name: yellow-image;
+      animation-duration: 5.5s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  &__btns {
+    align-items: flex-start;
+
+    .green {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: -57px;
+        right: -65px;
+        background-image: var(--hero-green);
+        background-repeat: no-repeat;
+        width: 65.905px;
+        height: 40.533px;
+        z-index: -1;
+        animation-name: green;
+        animation-duration: 6s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+
+        @media (max-width: 767px) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@keyframes green {
+  0% {
+    transform: translateY(0);
+  }
+
+  30% {
+    transform: translateY(30px);
+  }
+}
+
+@keyframes green-image {
+  0% {
+    transform: translateX(0);
+  }
+
+  30% {
+    transform: translateX(40px);
+  }
+}
+
+@keyframes yellow-image {
+  0% {
+    transform: translateY(0);
+  }
+
+  30% {
+    transform: translateY(40px);
+  }
+}
+
+@keyframes red-image {
+  0% {
+    transform: translateY(0);
+  }
+
+  30% {
+    transform: translateY(40px);
+  }
+}
+
+
+// @keyframes draw {
+//   // from {
+//   //   stroke-dashoffset: 0;
+//   // }
+
+//   to {
+//     stroke-dashoffset: 0;
+//     // stroke-dashoffset: 2600;
+//   }
+// }
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 2600;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
