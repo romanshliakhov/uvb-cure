@@ -1,0 +1,9 @@
+.faq {
+  margin-bottom: 93px;
+
+  &__wrapp {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 40px;
+  }
+}
