@@ -180,10 +180,9 @@ input[type="number"] {
 
 .container {
   position: relative;
-  max-width: 1540px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 clamp(10px, 10.417vw, 200px);
 }
 
 .disable-scroll {
