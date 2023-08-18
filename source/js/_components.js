@@ -1,4 +1,4 @@
-// import './components/sliders.js';
+import './components/sliders.js';
 // import './components/select.js';
 // import './components/burger.js';
 

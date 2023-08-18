@@ -1,0 +1,46 @@
+.diagnosis {
+  margin-bottom: 115px;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 42px;
+
+  &__wrapp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    grid-gap: 20px;
+  }
+
+  &__btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-blue-light);
+    cursor: pointer;
+  }
+
+  &__slider {
+    width: 100%;
+    height: 100%;
+    // margin-left: auto;
+    // margin-right: auto;
+  }
+
+  &__slider-wrapper {
+    width: 100%;
+    margin-left: -75px;
+  }
+
+  &__slide {
+    max-width: 700px;
+    width: 100%;
+  }
+}
