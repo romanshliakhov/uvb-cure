@@ -1,0 +1,121 @@
+.choose {
+  margin-bottom: 100px;
+
+  &__head {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__title {
+    max-width: 600px;
+    text-transform: uppercase;
+  }
+
+  &__info {
+    max-width: 760px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px 20px;
+  }
+
+  &__info-head {
+    grid-column: span 2;
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 700;
+  }
+
+
+  &__details {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+  }
+
+  &__detail {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 20px;
+    border-radius: 20px;
+    background-color: var(--color-blue-light);
+    overflow: hidden;
+
+    &._active {
+      align-items: flex-start;
+
+      .choose__arrow {
+        color: var(--color-white);
+        transform: scale(-1);
+      }
+    }
+  }
+
+  &__question {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    grid-gap: 20px;
+    font-size: 24px;
+    line-height: 31px;
+    font-weight: 700;
+    transition: all 0.4s ease;
+    z-index: 1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -20px;
+      height: 100vw;
+      width: 100vw;
+      background-color: var(--color-blue);
+      z-index: -1;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.4s ease;
+    }
+
+
+    &._active {
+      color: var(--color-white);
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__answer {
+    max-width: 690px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    color: var(--color-white);
+  }
+
+  &__arrow {
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    z-index: 2;
+    transition: all 0.4s ease;
+
+    svg {
+      fill: none;
+      stroke: currentColor;
+    }
+  }
+
+
+  &__alert {
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--color-grey);
+  }
+}

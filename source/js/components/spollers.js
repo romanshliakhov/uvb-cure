@@ -14,9 +14,11 @@ if (spollersArray.length > 0) {
     function initSpollers(spollersArray, matchMedia = false) {
         spollersArray.forEach(spollersBlock => {
             spollersBlock = matchMedia ? spollersBlock.item : spollersBlock;
+
             if (matchMedia.matches || !matchMedia) {
                 spollersBlock.classList.add('_init');
                 initSpollerBody(spollersBlock);
+
                 spollersBlock.addEventListener("click", setSpollerAction);
             } else {
                 spollersBlock.classList.remove('_init');
@@ -46,15 +48,22 @@ if (spollersArray.length > 0) {
 
     function setSpollerAction(e) {
         const el = e.target;
+
         if (el.hasAttribute('data-spoller') || el.closest('[data-spoller]')) {
             const spollerTitle = el.hasAttribute('data-spoller') ? el : el.closest('[data-spoller]');
+
             const spollersBlock = spollerTitle.closest('[data-spollers]');
+
             const oneSpoller = spollersBlock.hasAttribute('data-one-spoller') ? true : false;
+
             if (!spollersBlock.querySelectorAll('._slide').length) {
                 if (oneSpoller && !spollerTitle.classList.contains('_active')) {
-                    hideSpollersBody(spollersBlock);
+                  hideSpollersBody(spollersBlock);
                 }
+
                 spollerTitle.classList.toggle('_active');
+                spollerTitle.parentNode.classList.toggle('_active');
+
                 _slideToggle(spollerTitle.nextElementSibling, 500);
             }
             e.preventDefault();
@@ -63,8 +72,11 @@ if (spollersArray.length > 0) {
 
     function hideSpollersBody(spollersBlock) {
         const spollerActiveTitle = spollersBlock.querySelector('[data-spoller]._active');
+
         if (spollerActiveTitle) {
             spollerActiveTitle.classList.remove('_active');
+            spollerActiveTitle?.parentNode.classList.remove('_active');
+
             _slideUp(spollerActiveTitle.nextElementSibling, 500);
         }
     }
