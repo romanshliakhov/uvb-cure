@@ -193,3 +193,9 @@ input[type="number"] {
   top: 0;
   width: 100%;
 }
+
+[data-content] {
+  max-width: 211px;
+  overflow: hidden;
+  transition: all 0.5s;
+}
