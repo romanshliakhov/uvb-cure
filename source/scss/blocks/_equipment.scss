@@ -1,0 +1,136 @@
+.equipment {
+  margin-bottom: clamp(70px, 9.375vw, 180px);
+
+  &__title {
+    margin-bottom: clamp(20px, 2.083vw, 30px);
+  }
+
+  &__wrapp {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 40px;
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 1440px) {
+      align-items: flex-start;
+    }
+  }
+
+  &__filter {
+    display: flex;
+    align-items: center;
+    grid-gap: 20px;
+
+    @media (max-width: 1440px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__filter-head {
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  &__filters {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    grid-gap: 10px;
+  }
+
+  &__filters-btn {
+    padding: 14px 38px;
+    border-radius: 68px;
+    color: var(--color-blue);
+    border: 1px solid var(--color-blue);
+    transition: all 0.4s ease;
+    flex-shrink: 0;
+
+    &.active {
+      background-color: var(--color-blue);
+      border: 1px solid transparent;
+      color: var(--color-white);
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    grid-gap: 20px;
+
+    @media (max-width: 1140px) {
+      display: none;
+    }
+  }
+
+  &__product {
+    padding: clamp(18px, 3.659vw, 60px) clamp(18px, 2.439vw, 40px) clamp(18px, 2.439vw, 40px);
+    border-radius: clamp(13px, 1.829vw, 30px);
+    border: 0px solid var(--color-white);
+    background-color: #FAFAFA;
+    box-shadow: 0px 25px 18px 2px rgba(0, 0, 0, 0.10);
+  }
+
+  &__product-title {
+    margin-bottom: clamp(10px, 1.22vw, 20px);
+    font-size: clamp(19px, 2.195vw, 36px);
+    line-height: clamp(25px, 2.866vw, 47px);
+    font-weight: 600;
+  }
+
+  &__pricing {
+    margin-bottom: 10px;
+    display: flex;
+    grid-gap: 10px;
+  }
+
+  &__pricing-default {
+    font-size: clamp(10px, 1.098vw, 18px);
+    line-height: clamp(12px, 1.28vw, 21px);
+    font-weight: 500;
+  }
+
+  &__pricing-discount {
+    font-size: clamp(16px, 1.463vw, 24px);
+    line-height: clamp(19px, 1.707vw, 28px);
+    font-weight: 700;
+  }
+
+  &__rating {
+    margin-bottom: 10px;
+  }
+
+  &__reviews {
+    font-size: clamp(8px, 1.098vw, 18px);
+    line-height: clamp(10px, 1.28vw, 21px);
+    font-weight: 500;
+  }
+
+  &__product-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__pagination {
+    margin-top: 30px;
+    display: none;
+
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+    }
+
+    @media (max-width: 1140px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

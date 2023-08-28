@@ -1,8 +1,8 @@
 .better {
-  margin-bottom: 160px;
+  margin-bottom: clamp(70px, 8.333vw, 160px);
 
   &__title {
-    margin-bottom: 60px;
+    margin-bottom: clamp(20px, 3.125vw, 60px);
     max-width: 640px;
     text-transform: uppercase;
   }

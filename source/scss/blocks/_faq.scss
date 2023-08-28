@@ -1,13 +1,11 @@
 .faq {
-  margin-bottom: 93px;
+  margin-bottom: clamp(70px, 7.5vw, 93px);
 
   &__wrapp {
     display: flex;
     flex-direction: column;
-    grid-gap: 40px;
+    grid-gap: clamp(20px, 3.906vw, 40px);
   }
-
-
 
   &__questions {
     width: 100%;
@@ -15,15 +13,21 @@
 
   &__questions-item {
     border-top: 1px solid var(--color-blue);
+
+    &:last-child {
+      border-bottom: 1px solid var(--color-blue);
+    }
   }
 
   &__question {
     position: relative;
     width: 100%;
-    padding: 30px 0;
-    font-size: 24px;
-    line-height: 31px;
+    padding: clamp(10px, 2.93vw, 30px) 0;
+    padding-right: clamp(40px, 7.324vw, 75px);
+    font-size: clamp(16px, 2.344vw, 24px);
+    line-height: clamp(21px, 3.027vw, 31px);
     font-weight: 700;
+    text-align: left;
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.4s ease;

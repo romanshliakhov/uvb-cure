@@ -1,8 +1,8 @@
 .diagnosis {
-  margin-bottom: 115px;
+  margin-bottom: clamp(70px, 7.012vw, 115px);
   display: flex;
   flex-direction: column;
-  grid-gap: 42px;
+  grid-gap: clamp(20px, 2.439vw, 40px);
 
   &__wrapp {
     display: flex;
@@ -14,6 +14,10 @@
     display: flex;
     align-items: center;
     grid-gap: 20px;
+
+    @media (max-width: 1140px) {
+      display: none;
+    }
   }
 
   &__btn {
@@ -30,16 +34,29 @@
   &__slider {
     width: 100%;
     height: 100%;
-    // margin-left: auto;
-    // margin-right: auto;
   }
 
   &__slider-wrapper {
     width: 100%;
-    // margin-left: -75px;
   }
 
   &__slide {
     aspect-ratio: 1 / 1;
+  }
+
+  &__pagination {
+    margin-top: 30px;
+    display: none;
+
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+    }
+
+    @media (max-width: 1140px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }

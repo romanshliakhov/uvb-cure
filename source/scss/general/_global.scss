@@ -5,8 +5,8 @@ body {
   height: 100%;
   width: 100%;
   font-family: var(--font-family-inter);
-  font-size: 16px;
-  line-height: 130%;
+  font-size: clamp(14px, 1.111vw, 16px);
+  line-height: clamp(18px, 1.458vw, 21px);
   font-weight: 400;
   color: var(--color-gray);
 }
@@ -180,9 +180,10 @@ input[type="number"] {
 
 .container {
   position: relative;
+  max-width: 1640px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 clamp(10px, 10.417vw, 200px);
+  padding: 0 clamp(10px, 3.125vw, 60px);
 }
 
 .disable-scroll {
@@ -199,3 +200,4 @@ input[type="number"] {
   overflow: hidden;
   transition: all 0.5s;
 }
+

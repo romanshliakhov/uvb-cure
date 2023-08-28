@@ -10,12 +10,24 @@ let replaceSettings = {
 
 let elementName = {
   headerNav: '.header__nav',
-  headerNavParentDesktop: '.header__logo',
-  headerNavParentMobile: '.mobile__menu',
+  headerNavDesktop: '.header__inner',
+  headerNavMobile: '.mobile__menu',
 
-  headerControls: '.header__controls',
-  headerControlsDesktop: '.header__nav',
-  headerControlsMobile: '.mobile__menu',
+  heroContacts: '.header__contacts',
+  heroContactsDesktop: '.header__panel',
+  heroContactsMobile: '.mobile__menu',
+
+  heroBtn: '.hero__btn',
+  heroBtnDesktop: '.hero__descr',
+  heroBtnMobile: '.hero__wrapp',
+
+  resultsBtn: '.results__more',
+  resultsBtnDesktop: '.results__details',
+  resultsBtnMobile: '.results__inner',
+
+  footerSocials: '.footer__socials',
+  footerSocialsDesktop: '.footer__contacts',
+  footerSocialsMobile: '.footer__navigations',
 }
 
 let items = [...document.querySelectorAll('.container')];
@@ -39,13 +51,26 @@ const replaceElements = (elements, elementClass, desktopClass, mobileClass, mobi
 }
 
 window.addEventListener('resize', () => {
-  replaceElements(items, elementName.headerNav, elementName.headerNavParentDesktop, elementName.headerNavParentMobile, replaceSettings.afterbegin, replaceSettings.afterend, replaceSettings.tablet);
+  replaceElements(items, elementName.headerNav, elementName.headerNavDesktop, elementName.headerNavMobile, replaceSettings.beforeend, replaceSettings.afterbegin, replaceSettings.tablet);
 
-  replaceElements(items, elementName.headerControls, elementName.headerControlsDesktop, elementName.headerControlsMobile, replaceSettings.beforeend, replaceSettings.afterend, replaceSettings.tablet);
+  replaceElements(items, elementName.heroContacts, elementName.heroContactsDesktop, elementName.heroContactsMobile, replaceSettings.beforeend, replaceSettings.afterend, replaceSettings.tablet);
+
+  replaceElements(items, elementName.heroBtn, elementName.heroBtnDesktop, elementName.heroBtnMobile, replaceSettings.beforeend, replaceSettings.afterend, replaceSettings.mobile);
+
+  replaceElements(items, elementName.resultsBtn, elementName.resultsBtnDesktop, elementName.resultsBtnMobile, replaceSettings.afterend, replaceSettings.afterend, replaceSettings.tablet);
+
+  replaceElements(items, elementName.footerSocials, elementName.footerSocialsDesktop, elementName.footerSocialsMobile, replaceSettings.beforeend, replaceSettings.afterend, replaceSettings.mobile);
 });
 
 window.addEventListener('DOMContentLoaded', () => {
-  replaceElements(items, elementName.headerNav, elementName.headerNavParentDesktop, elementName.headerNavParentMobile, replaceSettings.afterbegin, replaceSettings.afterend, replaceSettings.tablet);
+  replaceElements(items, elementName.headerNav, elementName.headerNavDesktop, elementName.headerNavMobile, replaceSettings.beforeend, replaceSettings.afterbegin, replaceSettings.tablet);
 
-  replaceElements(items, elementName.headerControls, elementName.headerControlsDesktop, elementName.headerControlsMobile, replaceSettings.beforeend, replaceSettings.afterend, replaceSettings.tablet);
+  replaceElements(items, elementName.heroContacts, elementName.heroContactsDesktop, elementName.heroContactsMobile, replaceSettings.beforeend, replaceSettings.afterend, replaceSettings.tablet);
+
+  replaceElements(items, elementName.heroBtn, elementName.heroBtnDesktop, elementName.heroBtnMobile, replaceSettings.beforeend, replaceSettings.afterend, replaceSettings.mobile);
+
+
+  replaceElements(items, elementName.resultsBtn, elementName.resultsBtnDesktop, elementName.resultsBtnMobile, replaceSettings.afterend, replaceSettings.afterend, replaceSettings.tablet);
+
+  replaceElements(items, elementName.footerSocials, elementName.footerSocialsDesktop, elementName.footerSocialsMobile, replaceSettings.beforeend, replaceSettings.afterend, replaceSettings.mobile);
 });
