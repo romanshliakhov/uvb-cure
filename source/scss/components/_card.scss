@@ -1,10 +1,10 @@
 .card {
   height: 100%;
-  padding: 26px;
+  padding: clamp(18px, 1.585vw, 26px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-radius: 19.3px;
+  border-radius: clamp(13px, 1.159vw, 19px);
   background-color: #FAFAFA;
   box-shadow: 0px 25px 18px 2px rgba(0, 0, 0, 0.10);
 
@@ -41,8 +41,10 @@
   }
 
   &__details-head {
-    line-height: 25px;
+    font-size: clamp(12px, 0.976vw, 16px);
+    line-height: clamp(16px, 1.524vw, 25px);
     font-weight: 700;
+    flex-shrink: 0;
   }
 
   &__specifications {
@@ -55,7 +57,7 @@
     padding: 10px 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 8px;
+    grid-gap: clamp(3px, 0.488vw, 8px);
     border-top: 1px solid #B7B7B7;
     border-bottom: 1px solid #B7B7B7;
 
@@ -65,18 +67,25 @@
       align-items: center;
       grid-gap: 5px;
       text-align: center;
-      font-size: 8px;
-      line-height: 9px;
+      font-size: clamp(6px, 0.488vw, 8px);
+      line-height: clamp(7px, 0.549vw, 9px);
       font-weight: 500;
 
       span {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 50px;
-        height: 50px;
+        width: clamp(40px, 3.049vw, 50px);
+        height: clamp(40px, 3.049vw, 50px);
         border-radius: 50%;
         background-color: #E8F5FF;
+
+        svg {
+          @media (max-width: 1440px) {
+            width: 60%;
+            height: 60%;
+          }
+        }
       }
     }
   }
@@ -85,39 +94,44 @@
     display: flex;
     align-items: center;
     grid-gap: 8px;
+
+    @media (max-width: 1240px) {
+      align-items: flex-start;
+    }
   }
 
   &__help-tags {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     grid-gap: 5px;
 
     li {
-      padding: 6px 5px;
-      font-size: 10px;
-      line-height: 10px;
+      padding: clamp(4px, 0.366vw, 6px) 5px;
+      font-size: clamp(8px, 0.61vw, 10px);
+      line-height: clamp(8px, 0.61vw, 10px);
       color: var(--color-blue);
       border: 1px solid var(--color-blue);
-      border-radius: 8px;
+      border-radius: clamp(4px, 0.488vw, 8px);
     }
   }
 
   &__title {
-    margin-bottom: 12px;
-    font-size: 24px;
-    line-height: 31px;
+    margin-bottom: clamp(8px, 0.732vw, 12px);
+    font-size: clamp(19px, 1.463vw, 24px);
+    line-height: clamp(25px, 1.89vw, 31px);
     font-weight: 600;
   }
 
   &__pricing {
-    margin-bottom: 8px;
+    margin-bottom: clamp(5px, 0.488vw, 8px);
     display: flex;
     grid-gap: 6px;
   }
 
   &__pricing-before {
-    font-size: 11px;
-    line-height: 13px;
+    font-size: clamp(10px, 0.671vw, 11px);
+    line-height: clamp(12px, 0.793vw, 13px);
     font-weight: 500;
   }
 
@@ -162,9 +176,9 @@
 
   &__buy,
   &__link {
-    height: 42px;
-    font-size: 15px;
-    line-height: 15px;
+    height: clamp(40px, 2.561vw, 42px);
+    font-size: 14px;
+    line-height: 14px;
   }
 
   &__link {
@@ -174,7 +188,7 @@
   }
 
   &__descr {
-    font-size: 14px;
-    line-height: 18px;
+    font-size: clamp(10px, 0.854vw, 14px);
+    line-height: clamp(13px, 1.098vw, 18px);
   }
 }

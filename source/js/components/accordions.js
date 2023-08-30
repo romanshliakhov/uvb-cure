@@ -113,5 +113,3 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 const betterDetails = document.querySelectorAll('.better__detail');
-
-console.log(betterDetails);

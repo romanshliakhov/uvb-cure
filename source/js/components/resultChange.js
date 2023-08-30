@@ -1,89 +1,87 @@
-const changeBlock = document.querySelector('.results__slider');
-const changeBefore = document.querySelector('.results__before');
-const changeBeforeImg = document.querySelector('picture');
-const changeTrigger = document.querySelector('.results__change');
-const body = document.body;
-let isActive = false;
+const slider = document.getElementById('before-after-slider');
+const before = document.getElementById('before-image');
+const beforeImage = before.getElementsByTagName('picture')[0];
+const resizer = document.getElementById('resizer');
 
-if(changeBlock) {
-  document.addEventListener('DOMContentLoaded', () => {
-    let width = changeBlock.offsetWidth;
-    changeBeforeImg.style.width = `${width}px`;
-  })
+let active = false;
 
-  const beforeArterSlider = (x) => {
-    let shift = Math.max(0, Math.min(x, changeBlock.offsetWidth));
+//Sort overflow out for Overlay Image
+document.addEventListener("DOMContentLoaded", function() {
+  let width = slider.offsetWidth;
+  beforeImage.style.width = width + 'px';
+});
 
-    changeBefore.style.width = `${shift}px`;
-    changeTrigger.style.left = `${shift}px`;
+//Adjust width of image on resize
+window.addEventListener('resize', function() {
+  let width = slider.offsetWidth;
+  beforeImage.style.width = width + 'px';
+})
 
+resizer.addEventListener('mousedown',function(){
+  active = true;
+ resizer.classList.add('resize');
+
+});
+
+document.body.addEventListener('mouseup',function(){
+  active = false;
+ resizer.classList.remove('resize');
+});
+
+document.body.addEventListener('mouseleave', function() {
+  active = false;
+  resizer.classList.remove('resize');
+});
+
+document.body.addEventListener('mousemove',function(e){
+  if (!active) return;
+  let x = e.pageX;
+  x -= slider.getBoundingClientRect().left;
+  slideIt(x);
+  pauseEvent(e);
+});
+
+resizer.addEventListener('touchstart',function(){
+  active = true;
+  resizer.classList.add('resize');
+});
+
+document.body.addEventListener('touchend',function(){
+  active = false;
+  resizer.classList.remove('resize');
+});
+
+document.body.addEventListener('touchcancel',function(){
+  active = false;
+  resizer.classList.remove('resize');
+});
+
+//calculation for dragging on touch devices
+document.body.addEventListener('touchmove',function(e){
+  if (!active) return;
+  let x;
+
+  let i;
+  for (i=0; i < e.changedTouches.length; i++) {
+  x = e.changedTouches[i].pageX;
   }
 
-  const pauseEvents = (e) => {
-    e.stopPropagation();
-    e.preventDefault();
-    return false;
-  }
+  x -= slider.getBoundingClientRect().left;
+  slideIt(x);
+  pauseEvent(e);
+});
 
-  body.addEventListener('mousedown', () => {
-    isActive = true;
-  })
-
-  body.addEventListener('mouseup', () => {
-    isActive = false;
-  })
-
-  body.addEventListener('mouseleave', () => {
-    isActive = false;
-  })
-
-
-  body.addEventListener('mousemove', (e) => {
-    if (!isActive) {
-      return
-    }
-
-    let x = e.pageX;
-
-    x -= changeBlock.getBoundingClientRect().left;
-    beforeArterSlider(x);
-    pauseEvents(e);
-  })
-
-
-  body.addEventListener('touchstart', () => {
-    isActive = true;
-  })
-
-  body.addEventListener('touchend', () => {
-    isActive = false;
-  })
-
-  body.addEventListener('touchcancel', () => {
-    isActive = false;
-  })
-
-  body.addEventListener('touchmove', (e) => {
-    if (!isActive) {
-      return
-    }
-
-    let x;
-    let i;
-
-    for (i = 0; i < e.changedTouches.lenght; i++) {
-      x = e.changedTouches[i].pageX;
-    }
-
-
-    x -= changeBlock.getBoundingClientRect().left;
-    beforeArterSlider(x);
-    pauseEvents(e);
-  })
-
-  window.onresize = () => {
-    let width = changeBlock.offsetWidth;
-    changeBeforeImg.style.width = `${width}px`;
-  };
+function slideIt(x){
+    let transform = Math.max(0,(Math.min(x,slider.offsetWidth)));
+    before.style.width = transform+"px";
+    resizer.style.left = transform-0+"px";
 }
 
+//stop divs being selected.
+function pauseEvent(e){
+    if(e.stopPropagation) e.stopPropagation();
+    if(e.preventDefault) e.preventDefault();
+    e.cancelBubble=true;
+    e.returnValue=false;
+    return false;
+}

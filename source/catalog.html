@@ -25,25 +25,157 @@
 
           <div class="catalog__wrapp">
             <aside class="catalog__aside">
-              <div class="catalog__filters">
-                <div class="catalog__filters-trigger">
+              <div class="catalog__filters" data-spollers="992,max" data-one-spoller>
+                <div class="catalog__filters-trigger" tabindex="-1" type="button" data-spoller>
                   <svg width='30' height='30'>
                     <use href='img/sprite/sprite.svg#filter'></use>
                   </svg>
                   Products Filter
                 </div>
 
-                <div class="catalog__filters-content">
-                  <div class="catalog__filter">Price</div>
-                  <div class="catalog__filter">Lamp Intensity</div>
-                  <div class="catalog__filter">Battery</div>
-                  <div class="catalog__filter">Mobile Application</div>
-                  <div class="catalog__filter">Use type</div>
-                </div>
+                <ul class="catalog__filters-content filters">
+                  <li class="filters__item">
+                    <span class="filters__head">Price</span>
+
+                    <div class="filters__range">
+                      <div class="filters__range-head price-input">
+                        <div class="filters__range-field field">
+                          <input type="number" class="filters__range-input input-min" value="278">
+                        </div>
+
+                        <div class="filters__range-separator">-</div>
+
+                        <div class="filters__range-field field">
+                          <input type="number" class="filters__range-input input-max" value="1978">
+                        </div>
+                      </div>
+
+                      <div class="filters__range-slider slider">
+                        <div class="progress"></div>
+                      </div>
+
+                      <div class="filters__range-inputs range-input">
+                        <input type="range" class="filters__range-slider range-min" min="0" max="2000" value="278" step="5">
+                        <input type="range" class="filters__range-slider range-max" min="0" max="2000" value="1978" step="5">
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="filters__item">
+                    <span class="filters__head">Lamp Intensity</span>
+
+                    <ul class="filters__list">
+                      <li class="filters__list-item">
+                        <label>
+                          <input class="filters__input" type="checkbox" name="2.5mW/cm2">
+                          <span class="filters__checkbox">2.5mW/cm2 (8)</span>
+                        </label>
+                      </li>
+                      <li class="filters__list-item">
+                        <label>
+                          <input class="filters__input" type="checkbox" name="4.5mW/cm2">
+                          <span class="filters__checkbox">4.5mW/cm2 (1)</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="filters__item">
+                    <span class="filters__head">Battery</span>
+
+                    <ul class="filters__list">
+                      <li class="filters__list-item">
+                        <label>
+                          <input class="filters__input" type="checkbox" name="battery-false">
+                          <span class="filters__checkbox">No (1)</span>
+                        </label>
+                      </li>
+                      <li class="filters__list-item">
+                        <label>
+                          <input class="filters__input" type="checkbox" name="battery-true">
+                          <span class="filters__checkbox">Yes (1)</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="filters__item">
+                    <span class="filters__head">Mobile Application</span>
+
+                    <ul class="filters__list">
+                      <li class="filters__list-item">
+                        <label>
+                          <input class="filters__input" type="checkbox" name="application-false">
+                          <span class="filters__checkbox">No (1)</span>
+                        </label>
+                      </li>
+                      <li class="filters__list-item">
+                        <label>
+                          <input class="filters__input" type="checkbox" name="application-true">
+                          <span class="filters__checkbox">Yes (1)</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="filters__item">
+                    <span class="filters__head">Use type</span>
+
+                    <ul class="filters__list">
+                      <li class="filters__list-item">
+                        <label>
+                          <input class="filters__input" type="checkbox" name="face">
+                          <span class="filters__checkbox">Face (3)</span>
+                        </label>
+                      </li>
+                      <li class="filters__list-item">
+                        <label>
+                          <input class="filters__input" type="checkbox" name="body">
+                          <span class="filters__checkbox">Full Body (4)</span>
+                        </label>
+                      </li>
+                      <li class="filters__list-item">
+                        <label>
+                          <input class="filters__input" type="checkbox" name="hand-and-foot">
+                          <span class="filters__checkbox">Hand and Foot (3)</span>
+                        </label>
+                      </li>
+                      <li class="filters__list-item">
+                        <label>
+                          <input class="filters__input" type="checkbox" name="scalp-and-spot">
+                          <span class="filters__checkbox">Scalp and Spot (0)</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
               </div>
             </aside>
 
             <div class="catalog__content">
+              <div class="catalog__sorting sorting">
+                <div class="sorting__header">
+                  <div class="sorting__current">
+                    <span>Default sorting</span>
+                  </div>
+
+                  <svg width='18' height='18'>
+                    <use href='img/sprite/sprite.svg#sort-arrow'></use>
+                  </svg>
+                </div>
+
+                <div class="sorting__body">
+                  <ul class="sorting__variants">
+                    <li class="sorting__variants-item" data-choice='choosen'>
+                      <span class="sorting__variant">Price to low</span>
+                    </li>
+                    <li class="sorting__variants-item" data-choice='choosen'>
+                      <span class="sorting__variant">Price to high</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
               <div class="catalog__products">
                 <div class="card">
                   <div class="card__inner">

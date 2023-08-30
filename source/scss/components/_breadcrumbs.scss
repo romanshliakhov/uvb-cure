@@ -4,22 +4,14 @@
   grid-gap: 18px;
   justify-content: flex-start;
   user-select: none;
-
-  @media (max-width: 992px) {
-    overflow-x: scroll;
-  }
-
-  @media (max-width: 769px) {
-    display: inline-block;
-  }
+  overflow-x: auto;
 
   &__prev {
     position: relative;
     display: flex;
     align-items: center;
-    grid-gap: 4px;
-    font-size: 18px;
-    line-height: 36px;
+    font-size: clamp(12px, 1.098vw, 18px);
+    line-height: clamp(12px, 2.195vw, 36px);
     font-weight: 500;
     color: #8F8F8F;
     white-space: nowrap;
@@ -28,13 +20,19 @@
       content: "/";
       position: absolute;
       width: 2px;
-      height: 100%;
       right: -8px;
+    }
+
+    svg {
+      width: clamp(16px, 1.341vw, 22px);
+      height: clamp(16px, 1.341vw, 22px);
     }
   }
 
   &__current {
-    font-weight: 700;
+    font-size: clamp(12px, 1.098vw, 18px);
+    line-height: clamp(12px, 2.195vw, 36px);
+    font-weight: 600;
     white-space: nowrap;
   }
 }
