@@ -1,41 +1,44 @@
-const rangeInput = document.querySelectorAll(".range-input input"),
-priceInput = document.querySelectorAll(".price-input input"),
-range = document.querySelector(".slider .progress");
-let priceGap = 5;
+import noUiSlider from 'nouislider';
 
-priceInput.forEach(input =>{
-    input.addEventListener("input", e =>{
-        let minPrice = parseInt(priceInput[0].value),
-        maxPrice = parseInt(priceInput[1].value);
+const rangeSlider = document.getElementById('range-slider');
 
-        if((maxPrice - minPrice >= priceGap) && maxPrice <= rangeInput[1].max){
-            if(e.target.className === "input-min"){
-                rangeInput[0].value = minPrice;
-                range.style.left = ((minPrice / rangeInput[0].max) * 100) + "%";
-            }else{
-                rangeInput[1].value = maxPrice;
-                range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
-            }
-        }
+if(rangeSlider) {
+  noUiSlider.create(rangeSlider, {
+    start: [279, 1978],
+    connect: true,
+    step: 1,
+    range: {
+      'min': [0],
+      'max': [2000]
+    }
+  });
+
+  const rangeMin = document.getElementById('range-min');
+  const rangeMax = document.getElementById('range-max');
+  const ranges = [rangeMin, rangeMax];
+
+  rangeSlider.noUiSlider.on('update', function(values, handle) {
+    ranges[handle].value = Math.round(values[handle]);
+
+    // let inputsValue = `${ranges[handle].value + '$'}`;
+
+    // собственно цифры value в инпуте
+    // console.log(inputsValue.replace(/(\d)(?=(\d{3})+(\D|$))/g, '1 '));
+  });
+
+  const setRangeSlider = (i, value) => {
+    let arr = [null, null];
+    arr[i] = value;
+
+    rangeSlider.noUiSlider.set(arr);
+  };
+
+  ranges.forEach((el, index) => {
+    el.addEventListener('change', (e) => {
+      setRangeSlider(index, e.currentTarget.value);
     });
-});
+  })
+}
 
-rangeInput.forEach(input =>{
-    input.addEventListener("input", e =>{
-        let minVal = parseInt(rangeInput[0].value),
-        maxVal = parseInt(rangeInput[1].value);
 
-        if((maxVal - minVal) < priceGap){
-            if(e.target.className === "range-min"){
-                rangeInput[0].value = maxVal - priceGap
-            }else{
-                rangeInput[1].value = minVal + priceGap;
-            }
-        }else{
-            priceInput[0].value = minVal;
-            priceInput[1].value = maxVal;
-            range.style.left = ((minVal / rangeInput[0].max) * 100) + "%";
-            range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
-        }
-    });
-});
+

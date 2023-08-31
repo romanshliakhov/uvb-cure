@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+@include('partials/head.html',{})
+
+<body>
+  <div class="wrapper">
+    @include('partials/header.html',{})
+
+    <main class="main">
+      <section class="product-card">
+        <div class="container">
+          <div class="product-card__wrapp">
+            <div class="breadcrumbs">
+              <a class="breadcrumbs__prev" href="/">
+                <svg width='22' height='22'>
+                  <use href='img/sprite/sprite.svg#home'></use>
+                </svg>
+                Home
+              </a>
+              <span class="breadcrumbs__current">Products</span>
+            </div>
+
+            <div class="product-card__inner">
+              12
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="results">
+        <div class="container">
+          <h2 class="results__title subtitle">Results before and after</h2>
+
+          <div class="results__inner">
+            <div class="results__left">
+              <picture>
+                <source type='image/webp' srcset='img/tara-milivan.webp'>
+                <img width='518' height='466' src='img/tara-milivan.png' alt='tara-milivan'>
+              </picture>
+            </div>
+
+            <div class="results__slider">
+              <div class="results__slider" id="before-after-slider">
+                <div class="results__before" id="before-image">
+                  <picture>
+                    <source type='image/webp' srcset='img/result/before.webp'>
+                    <img width='360' height='640' src='img/result/before.png' alt='before'>
+                  </picture>
+                </div>
+
+                <div class="results__after" id="after-image">
+                  <picture>
+                    <source type='image/webp' srcset='img/result/after.webp'>
+                    <img width='360' height='640' src='img/result/after.png' alt='after'>
+                  </picture>
+                </div>
+
+                <div class="results__change" id="resizer"></div>
+              </div>
+            </div>
+
+            <div class="results__info">
+              <ul class="results__details">
+                <li class="results__detail">
+                  <p>Name: <span>Tara Milvan</span></p>
+                </li>
+                <li class="results__detail">
+                  <p>Skin Condition: <a href="#">Psoriasis</a></p>
+                </li>
+                <li class="results__detail">
+                  <p>Treatment Time: <span>6 weeks</span></p>
+                </li>
+                <li class="results__detail">
+                  <p>Number of session: <span>14</span></p>
+                </li>
+                <li class="results__detail">
+                  <p>Average treatment time: <span>2</span></p>
+                </li>
+                <li class="results__detail">
+                  <p>Skin type: <span>Type II (Fair skin)</span></p>
+                </li>
+                <li class="results__detail">
+                  <p>Location: <span>Hands, Body</span></p>
+                </li>
+                <li class="results__detail">
+                  <p>Equipment: <a href="#">UV lamp KN-4003BL</a></p>
+                </li>
+              </ul>
+
+              <button class="results__more btn">More stories</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="therapy">
+        <div class="container">
+          <div class="therapy__wrapp">
+            <h2 class="therapy__title subtitle">Therapy</h2>
+
+            <div class="therapy__details">
+              <div class="therapy__detail">
+                <span class="therapy__detail-head">Psoriasis</span>
+
+                <ul>
+                  <li>Plaque Psoriasis</li>
+                  <li>Guttate Psoriasis</li>
+                  <li>Inverse Psoriasis</li>
+                  <li>Pustular Psoriasis</li>
+                  <li>Erythrodermic Psoriasis</li>
+                  <li>Psoriatic arthritis</li>
+                </ul>
+              </div>
+
+              <div class="therapy__detail">
+                <span class="therapy__detail-head">Eczema</span>
+
+                <ul>
+                  <li>Atopic Dermatitis</li>
+                  <li>Contact Dermatitis</li>
+                  <li>Dyshidrotic eczema</li>
+                  <li>Nummular eczema</li>
+                  <li>Seborrheic Dermatitis</li>
+                  <li>Stasis Dermatitis</li>
+                </ul>
+              </div>
+
+              <div class="therapy__detail">
+                <span class="therapy__detail-head">Vitiligo</span>
+
+                <ul>
+                  <li>Generalized Vitiligo</li>
+                  <li>Segmental Vitiligo</li>
+                  <li>Universal Vitiligo</li>
+                  <li>Lip-tip Vitiligo</li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+
+              <div class="therapy__detail">
+                <span class="therapy__detail-head">Other conditions</span>
+
+                <ul>
+                  <li>Neurodermatitis</li>
+                  <li>Skin Erosion</li>
+                  <li>Ringworm</li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews">
+        <div class="container">
+          <div class="reviews__wrapp">
+            <h2 class="reviews__title subtitle">Reviews <span>(10)</span></h2>
+
+            <div class="reviews__info">
+              33
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq">
+        <div class="container">
+          <div class="faq__wrapp">
+            <h2 class="subtitle">FAQ</h2>
+
+            <ul class="faq__questions" data-spollers data-one-spoller>
+              <li class="faq__questions-item">
+                <button class="faq__question" tabindex="-1" type="button" data-spoller>
+                  ARE YOUR UVB LAMPS US FDA APPROVED?
+                </button>
+                <div class="faq__answer">
+                  Lorem ipsum dolor sit amet.
+                </div>
+              </li>
+              <li class="faq__questions-item">
+                <button class="faq__question" tabindex="-1" type="button" data-spoller>
+                  ARE THE PSORIASIS AND VITILIGO LAMPS THE SAME LAMPS?
+                </button>
+                <div class="faq__answer">
+                  Lorem ipsum dolor sit amet.
+                </div>
+              </li>
+              <li class="faq__questions-item">
+                <button class="faq__question" tabindex="-1" type="button" data-spoller>
+                  WHAT IS THE NORMAL LIFE OF THE BULB IN THE UVB LAMP?
+                </button>
+                <div class="faq__answer">
+                  Lorem ipsum dolor sit amet.
+                </div>
+              </li>
+              <li class="faq__questions-item">
+                <button class="faq__question" tabindex="-1" type="button" data-spoller>
+                  IS UVB PHOTOTHERAPY SAFE TO USE WITH OTHER SKIN CONDITION TREATMENTS?
+                </button>
+                <div class="faq__answer">
+                  Lorem ipsum dolor sit amet.
+                </div>
+              </li>
+              <li class="faq__questions-item">
+                <button class="faq__question" tabindex="-1" type="button" data-spoller>
+                  HOW DO I KNOW WHICH DOSING SCHEDULE IS RIGHT FOR ME?
+                </button>
+                <div class="faq__answer">
+                  Lorem ipsum dolor sit amet.
+                </div>
+              </li>
+              <li class="faq__questions-item">
+                <button class="faq__question" tabindex="-1" type="button" data-spoller>
+                  DO YOU ACCEPT HEALTH INSURANCE?
+                </button>
+                <div class="faq__answer">
+                  Lorem ipsum dolor sit amet.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @include('partials/footer.html',{})
+    @include('partials/modals.html',{})
+  </div>
+
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

@@ -37,27 +37,20 @@
                   <li class="filters__item">
                     <span class="filters__head">Price</span>
 
-                    <div class="filters__range">
-                      <div class="filters__range-head price-input">
-                        <div class="filters__range-field field">
-                          <input type="number" class="filters__range-input input-min" value="278">
-                        </div>
+                    <div class="filters__range range">
+                      <div class="range__inputs">
+                        <label class="range__label">
+                          <input class="range__input" type="number" min="0" max="2000" value="278" id="range-min">
+                        </label>
 
-                        <div class="filters__range-separator">-</div>
+                        <div class="range__separator">-</div>
 
-                        <div class="filters__range-field field">
-                          <input type="number" class="filters__range-input input-max" value="1978">
-                        </div>
+                        <label class="range__label">
+                          <input class="range__input" type="number" min="0" max="2000" value="1 978" id="range-max">
+                        </label>
                       </div>
 
-                      <div class="filters__range-slider slider">
-                        <div class="progress"></div>
-                      </div>
-
-                      <div class="filters__range-inputs range-input">
-                        <input type="range" class="filters__range-slider range-min" min="0" max="2000" value="278" step="5">
-                        <input type="range" class="filters__range-slider range-max" min="0" max="2000" value="1978" step="5">
-                      </div>
+                      <div class="range__slider" id="range-slider"></div>
                     </div>
                   </li>
 
@@ -295,7 +288,7 @@
 
                   <div class="card__bottom">
                     <button class="card__buy btn">Buy</button>
-                    <a class="card__link btn" href="#">VIEW MODEL</a>
+                    <a class="card__link btn" href="/product-card.html">VIEW MODEL</a>
                   </div>
                 </div>
 

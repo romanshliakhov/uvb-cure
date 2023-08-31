@@ -1,0 +1,60 @@
+.range {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 30px;
+
+  &__inputs {
+    display: flex;
+    align-items: center;
+    grid-gap: 5px;
+  }
+
+  &__range-separator {
+    color: #D6D6D6;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 700;
+  }
+
+  &__input {
+    position: relative;
+    padding: 6px 16px;
+    font-size: 15px;
+    line-height: 15px;
+    color: var(--color-gray);
+    border-radius: 8px;
+    border: 1px solid #D6D6D6;
+  }
+
+  &__slider {
+    width: calc(100% - 15px);
+  }
+
+  .noUi-target {
+    height: 2px;
+    background: var(--color-blue-light);
+    border: none;
+    box-shadow: none;
+  }
+
+  .noUi-connect {
+    background: var(--color-blue);
+  }
+
+  .noUi-handle {
+    right: -15px;
+    top: -15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #EEE;
+    border: 1px solid #D6D6D6;
+    box-shadow: none;
+    cursor: pointer;
+
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
+}

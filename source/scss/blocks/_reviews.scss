@@ -1,0 +1,16 @@
+.reviews {
+  margin-bottom: clamp(70px, 6.098vw, 100px);
+
+  &__wrapp {
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(20px, 3.906vw, 40px);
+  }
+
+  &__title {
+    span {
+      font-weight: 400;
+      color: var(--color-grey);
+    }
+  }
+}
