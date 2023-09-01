@@ -1,5 +1,5 @@
 .feedback {
-  padding: 30px;
+  padding: clamp(18px, 2.083vw, 30px);
   border-radius: 19.3px;
   background-color: #FAFAFA;
   box-shadow: 0px 7px 11px 1.28667px rgba(0, 0, 0, 0.10);
@@ -33,7 +33,7 @@
     color: #D6D6D6;
   }
 
-  &__text {
+  &__descr {
     font-size: 14px;
     line-height: 18px;
   }
