@@ -1,0 +1,40 @@
+.feedback {
+  padding: 30px;
+  border-radius: 19.3px;
+  background-color: #FAFAFA;
+  box-shadow: 0px 7px 11px 1.28667px rgba(0, 0, 0, 0.10);
+
+  &__info {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    grid-gap: 7px;
+  }
+
+  &__info-details {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 5px;
+  }
+
+  &__rating {
+    margin-bottom: 15px;
+  }
+
+  &__name {
+    font-size: 17px;
+    line-height: 22px;
+    font-weight: 600;
+  }
+
+  &__pubtime {
+    font-size: 12px;
+    line-height: 16px;
+    color: #D6D6D6;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
