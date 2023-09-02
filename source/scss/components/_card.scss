@@ -191,4 +191,11 @@
     font-size: clamp(10px, 0.854vw, 14px);
     line-height: clamp(13px, 1.098vw, 18px);
   }
+
+  &__summary {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+  }
 }

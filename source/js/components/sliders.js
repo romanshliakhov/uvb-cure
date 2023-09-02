@@ -57,3 +57,17 @@ let equipmentProducts = new Swiper(".equipment__products", {
     },
   },
 });
+
+let productCardSlider = new Swiper(".product-card__slider", {
+  observer: true,
+  observeParents: true,
+  observeSlideChildren: true,
+  centeredSlides: true,
+  loop: true,
+  slidesPerView: 1,
+  navigation: {
+    nextEl: ".product-card__slider-btn--next",
+    prevEl: ".product-card__slider-btn--prev",
+  },
+});
+
